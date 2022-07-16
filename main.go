@@ -11,7 +11,9 @@ func main() {
 	router := gin.Default()
 	gin.SetMode(gin.ReleaseMode)
 	router.Use(cors.Default())
-	router.POST("/pagenum", handler.PageCountFileRestApi)
+	router.POST("/pageCountFile", handler.PageCountFileRestApi)
+	router.POST("/addTextWatermarksFile", handler.AddTextWatermarksFileRestApi)
+
 	// router.GET("/cards", handlers.GetCards)
 	// router.DELETE("/cards/:id", handlers.DeleteCard)
 	// router.GET("/tags", handlers.GetTags)
